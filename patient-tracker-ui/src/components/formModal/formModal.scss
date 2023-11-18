@@ -1,0 +1,24 @@
+// styling the model content class
+.modal-content {
+  // styling the form
+  form {
+    // styling the form label
+    .form-label {
+      display: flex;
+      justify-content: left;
+    }
+  }
+
+  // styling the footer
+  .modal-footer {
+    // styling the button
+    button {
+      min-width: 100px;
+      height: 40px;
+      border: 2px solid #760876;
+      background: #760876;
+      color: #ffff;
+      padding: 5px;
+    }
+  }
+}

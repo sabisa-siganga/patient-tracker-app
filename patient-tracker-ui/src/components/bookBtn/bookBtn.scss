@@ -1,0 +1,17 @@
+// styling the book button container
+.book-container {
+  display: flex;
+  justify-content: left;
+  padding-left: 25px;
+
+  // styling the book button
+  button {
+    background: #760876;
+    border: 2px solid #760876;
+    min-width: 176px;
+    height: 43px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+  }
+}

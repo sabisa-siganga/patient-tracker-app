@@ -1,0 +1,13 @@
+// style of the header container
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+
+  // styling the p tag
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+  }
+}

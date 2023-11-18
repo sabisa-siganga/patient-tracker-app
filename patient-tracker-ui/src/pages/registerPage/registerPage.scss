@@ -1,0 +1,72 @@
+// styling the register container
+.register-container {
+  max-width: 600px;
+  min-height: 500px;
+  box-shadow: 1px 1px 37px 1px #a19898;
+  margin: 0 auto;
+  background: #f9dff2;
+  color: #760876;
+  border-radius: 5px;
+
+  // styling the title
+  h2 {
+    font-size: 27px;
+    font-weight: 500;
+    color: #760876;
+  }
+
+  // styling form container
+  .register-form {
+    display: flex;
+    justify-content: center;
+
+    // styling form
+    form {
+      // styling input field container
+      .userField {
+        // styling form label
+        label {
+          display: block;
+          font-size: 17px;
+          font-weight: 400;
+          color: #760876;
+          text-align: left;
+        }
+        // styling form input
+        input {
+          width: 350px;
+          height: 45px;
+          border: 2px solid #760876;
+          border-radius: 5px;
+          padding-left: 10px;
+          outline: none;
+        }
+      }
+
+      // styling register button container
+      .regBtn-container {
+        // styling button
+        .regi-btn {
+          min-width: 100px;
+          height: 40px;
+          border: 2px solid #760876;
+          background: #760876;
+          color: #ffff;
+          padding: 5px;
+        }
+      }
+      // styling form account-exists class
+      .account-exists {
+        display: flex;
+
+        column-gap: 7px;
+
+        // signin class
+        .sign-in {
+          text-decoration: underline;
+          color: #0737efc7;
+        }
+      }
+    }
+  }
+}

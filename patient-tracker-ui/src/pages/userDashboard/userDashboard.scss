@@ -1,0 +1,21 @@
+// styling the user container
+.user-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow: 1px 1px 37px 1px #ddd;
+  border-radius: 5px;
+  min-height: 700px;
+
+  // styling the user title
+  .user-title {
+    font-size: 25px;
+    font-weight: 400;
+  }
+  // styling the cards container
+  .cards-container {
+    display: flex;
+    column-gap: 30px;
+    flex-wrap: wrap;
+    padding: 30px;
+  }
+}

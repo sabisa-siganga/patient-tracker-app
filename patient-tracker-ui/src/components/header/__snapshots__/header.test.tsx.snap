@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders: <Header /> Taking a snapshot 1`] = `
+<div
+  className="header-container mb-4"
+>
+  <p>
+    John Doe
+  </p>
+  <div
+    className="signout-container"
+  >
+    <button
+      className="btn btn-dark"
+      onClick={[Function]}
+    >
+      Sign out
+    </button>
+  </div>
+</div>
+`;

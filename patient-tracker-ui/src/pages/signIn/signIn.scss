@@ -1,0 +1,60 @@
+.sign-in-container {
+  max-width: 600px;
+  min-height: 500px;
+  box-shadow: 1px 1px 37px 1px #a19898;
+  margin: 0 auto;
+  background: #f9dff2;
+  color: #760876;
+  border-radius: 5px;
+
+  h2 {
+    font-size: 27px;
+    font-weight: 500;
+    color: #760876;
+  }
+
+  .sign-in-form {
+    display: flex;
+    justify-content: center;
+
+    form {
+      .userField {
+        label {
+          display: block;
+          font-size: 17px;
+          font-weight: 400;
+          color: #760876;
+          text-align: left;
+        }
+        input {
+          width: 350px;
+          height: 45px;
+          border: 2px solid #760876;
+          border-radius: 5px;
+          padding-left: 10px;
+          outline: none;
+        }
+      }
+      .sign-btn-container {
+        .sign-btn {
+          min-width: 100px;
+          height: 40px;
+          border: 2px solid #760876;
+          background: #760876;
+          color: #ffff;
+          padding: 5px;
+        }
+      }
+      .no-account {
+        display: flex;
+
+        column-gap: 7px;
+
+        .sign-in {
+          text-decoration: underline;
+          color: #0737efc7;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+// styling the card container
+.card {
+  max-width: 300px;
+  min-height: 180px;
+  background: #760876;
+  align-items: flex-start;
+  border: none;
+  padding: 25px;
+  box-shadow: 1px 1px 37px 1px #ddd;
+
+  // styling the p tag
+  p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+  }
+}
