@@ -17,9 +17,6 @@ const indexRouter = require("./routes/index");
 // using middleware to parse JSON data
 app.use(express.json());
 
-// port
-const PORT = process.env.PORT || 8080;
-
 // initiating database connection
 connectToDatabase();
 
@@ -28,6 +25,4 @@ app.use("/", indexRouter);
 app.use("/appointments", appointmentRoutes);
 app.use("/my-appointments", userRoutes);
 
-app.listen(PORT, () => {
-  console.log(`http://localhost:${PORT}`);
-});
+module.exports = app;

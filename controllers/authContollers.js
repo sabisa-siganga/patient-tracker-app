@@ -28,7 +28,7 @@ const registerUser = async (req, res) => {
       .save()
       .then((result) => {
         // Responding with a success message if user registration is successful
-        res.status(200).json({
+        res.status(201).json({
           message: "Successfully registered the user",
         });
       })
@@ -62,8 +62,10 @@ async function login(req, res) {
       return res.status(401).json({ error: "User is not found" });
     }
 
+    const correctPassword = await bcrypt.compare(password, findUser.password);
+
     // Comparing the provided password with the hashed password stored in the database
-    if (bcrypt.compare(password, findUser.password)) {
+    if (correctPassword) {
       // Generating a JWT token for the authenticated user
 
       const jwtToken = produceToken(findUser._id, findUser.role);

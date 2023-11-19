@@ -4,7 +4,7 @@ Creating a patient tracker app that allows doctors to track information about pa
 
 ## System Architecture
 
-The Patient Tracker App is built using the following web stack:
+The Patient Tracker App will be built using the following web stack:
 
 - **Frontend**: React with create-react-app, styled using Sass and react-bootstrap.
 - **Backend**: Express.js.
@@ -28,7 +28,7 @@ The Patient Tracker App is built using the following web stack:
 
 ### Deployment
 
-The app is deployed on CodeSandbox, a cloud-based development environment. CodeSandbox provides a convenient platform for rapid prototyping and testing of React applications without the need for local development setups.
+The app will be deployed on CodeSandbox, a cloud-based development environment. CodeSandbox provides a convenient platform for rapid prototyping and testing of React applications without the need for local development setups.
 
 #### Why CodeSandbox?
 
@@ -143,3 +143,112 @@ There are various patient-tracking apps available such as Zocdoc. The app that i
 
 5. **Performance and Scalability**:
    - CodeSandbox deployment allows for quick testing and prototyping.
+
+## How to Use the Patient Tracker App
+
+### Prerequisites
+
+Before you start, make sure you have the following installed:
+
+- Node.js
+- MongoDB (you can use a cloud-based MongoDB service)
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/sabisa-siganga/patient-tracker-app.git
+   ```
+
+### Navigate to the project directory:
+
+cd ` patient-tracker-app`
+
+### Install dependencies:
+
+npm install
+
+### Configuration:
+
+1. Open the .env file and modify the MongoDB URI, if need to:
+
+CONNECTURI=""
+
+2. Save the changes.
+
+### Running the App
+
+1. Start the backend server:
+
+run `npm start`
+
+2. Open a new terminal window and start the frontend:
+
+`cd patient-tracker-ui`
+
+run `npm install`, then `npm start`
+
+3. The app should open in http://loclhalhost:3000 web browser.
+
+### User Registration
+
+1. As a general user, if you don't have an account, register by clicking on the "Register" link on the login page.
+
+2. Enter a username and a secure password.
+
+3. Click "Register" to create your account.
+
+### User Login
+
+1. After registering, or if you already have an account. On the Sign in page do the following:
+
+2. Enter your username and password.
+
+3. Click "Login" to access the user dashboard.
+
+### Admin Login
+
+1. Admin credentials are provided by the system and do not require registration.
+
+2. As an admin, on the Sign in page, do the following:
+
+3. Enter the admin username and password. Use the following admin credentials:
+   Email: admin@gmail.com
+   Password: admin
+
+4. Click "Login" to access the admin dashboard.
+
+### Testing
+
+To run tests, use the following command:
+
+npm test
+
+Frontend tests should be run while in the frontend directory, and backend tests should be run while in the backend directory.
+
+### Security Measures
+
+The Patient Tracker App implements the following security measures:
+
+**Authentication**: User authentication ensures that only authorized individuals can access the system.
+
+**Data Encryption**: Sensitive data, such as passwords, is encrypted to prevent unauthorized access.
+
+**Secure API Endpoints**: Backend routes are protected to ensure that only authenticated and authorized users can perform actions.
+
+### Deployment
+
+The application is deployed on CodeSandbox, a cloud-based development environment. Both the frontend and backend are deployed together to ensure seamless testing and collaboration.
+
+### Why Deploy Together?
+
+Deploying both frontend and backend together offers several advantages:
+
+**Simplified Testing**: It allows for comprehensive testing of the entire application, ensuring that frontend and backend components work seamlessly.
+
+**Easy Deployment**: Deploying together simplifies the deployment process, especially in cloud-based environments like CodeSandbox.
+
+### Conclusion
+
+The Patient Tracker App aims to provide an efficient and secure solution for managing doctor-patient appointments. The combination of React, Express.js, and MongoDB ensures a robust and scalable architecture. By deploying on CodeSandbox, the development and testing process becomes more accessible, allowing for quick prototyping and collaboration.

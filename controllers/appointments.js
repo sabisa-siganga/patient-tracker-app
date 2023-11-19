@@ -26,7 +26,7 @@ async function addAppointment(req, res) {
     appointment
       .save()
       .then((result) => {
-        res.status(200).json({
+        res.status(201).json({
           appointment: {
             _id: result._id,
             name: result.name,
@@ -77,7 +77,7 @@ async function fetchUserAppointments(req, res) {
     // getting appointments using the username and dateTime
     const appointments = await Appointment.find({
       username,
-      dateTime: { $gte: thirtyDaysAgo }, // Filter appointments within the last 30 days
+      // dateTime: { $gte: thirtyDaysAgo }, // Filter appointments within the last 30 days
     })
 
       // ommitting the _v property

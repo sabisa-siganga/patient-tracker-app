@@ -60,7 +60,7 @@ const FormModal = (props: Props) => {
   return (
     <>
       {/* Modal to add or edit appointment */}
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} onHide={handleClose} data-testid="form-modal">
         <Form onSubmit={onSubmit}>
           <Modal.Header closeButton>
             <Modal.Title data-testid="modal-title">
@@ -104,6 +104,7 @@ const FormModal = (props: Props) => {
                 required
               />
             </Form.Group>
+
             <Form.Group className="mb-3" controlId="formInput.ControlInput4">
               <Form.Label>Date & Time:</Form.Label>
               <Form.Control
@@ -118,7 +119,11 @@ const FormModal = (props: Props) => {
           </Modal.Body>
           <Modal.Footer>
             {/* close button */}
-            <Button variant="secondary" onClick={handleClose}>
+            <Button
+              variant="secondary"
+              data-testid="close"
+              onClick={handleClose}
+            >
               Close
             </Button>
 

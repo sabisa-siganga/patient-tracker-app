@@ -39,7 +39,7 @@ const RegisterPage = () => {
       // Parse the response as JSON
       const results = await response.json();
 
-      // Check for errors in the response
+      // Check for errors in the response and respond with an alert
       if (results.error) {
         return alert(results.error);
       }
@@ -55,6 +55,7 @@ const RegisterPage = () => {
       <h2 className="pb-5">Register account</h2>
       <div className="register-form">
         <form onSubmit={onRegister}>
+          {/* input fields */}
           <div className="userField mb-4">
             <label className="mb-1">Username:</label>
             <input

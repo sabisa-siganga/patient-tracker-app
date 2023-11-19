@@ -81,8 +81,6 @@ const TableData = (props: EditProps) => {
 
       // Calling the parent component's callback function to update the state with the modified appointments
       onEditAppointment(results.appointments);
-      // Closing the modal after cancellation
-      handleClose();
     } catch (error) {
       // error handling
       console.log(error);
@@ -96,11 +94,11 @@ const TableData = (props: EditProps) => {
       <td>{status}</td>
       <td>
         {/* edit button */}
-        <button onClick={handleShow}>
+        <button onClick={handleShow} data-testid="edit">
           <span className="material-symbols-outlined">edit</span>
         </button>
         {/* cancel button */}
-        <button onClick={onCancel}>
+        <button onClick={onCancel} data-testid="cancel">
           <span className="material-symbols-outlined">cancel</span>
         </button>
       </td>
