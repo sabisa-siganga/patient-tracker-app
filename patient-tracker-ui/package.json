@@ -47,6 +47,7 @@
   },
   "proxy": "http://localhost:8080",
   "devDependencies": {
+    "@types/luxon": "^3.3.4",
     "@types/react-test-renderer": "^18.0.6",
     "react-test-renderer": "^18.2.0"
   }

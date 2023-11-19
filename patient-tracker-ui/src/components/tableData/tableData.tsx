@@ -87,11 +87,14 @@ const TableData = (props: EditProps) => {
       console.log(error);
     }
   };
+
+  console.log(dateTime);
+
   return (
     // rendering table data
     <tr>
       <td>{name}</td>
-      <td>{DateTime.fromISO(dateTime).toFormat("ff")}</td>
+      <td data-testid="date">{DateTime.fromISO(dateTime).toFormat("ff")}</td>
       <td>{status}</td>
       <td>
         {/* edit button */}

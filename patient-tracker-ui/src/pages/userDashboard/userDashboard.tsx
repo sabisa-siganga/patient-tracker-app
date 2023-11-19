@@ -60,7 +60,7 @@ const UserDashboard = () => {
   return (
     <div className="user-container">
       {/* Header component with a welcome message for the current user */}
-      <Header currentUser={`Welcome, ${currentUser}`} />
+      <Header currentUser={`Welcome,  ${currentUser}`} />
       {/* Title for the user appointments section */}
       <p className="user-title mb-5">Patient appointments</p>
       {/* Container for displaying user appointments using Card components */}

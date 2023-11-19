@@ -2,6 +2,7 @@ import React from "react";
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import TableData from "./tableData";
+import { DateTime } from "luxon";
 
 // Mock the fetch function
 global.fetch = jest.fn(() =>
@@ -20,7 +21,7 @@ const mockData = {
   _id: "23",
   status: "Active",
   name: "Sabisa Siganga",
-  dateTime: "2023-11-20T09:22",
+  dateTime: "2023-11-20T07:10:00.000Z",
 };
 
 describe("TableData", () => {
@@ -35,7 +36,9 @@ describe("TableData", () => {
 
     // Assert that the rendered row contains the expected data
     expect(screen.getByText("Sabisa Siganga")).toBeInTheDocument();
-    expect(screen.getByText("2023-11-20T09:22")).toBeInTheDocument();
+    expect(screen.getByTestId("date")).toHaveTextContent(
+      DateTime.fromISO(mockData.dateTime).toFormat("ff")
+    );
     expect(screen.getByText("Active")).toBeInTheDocument();
   });
 
