@@ -96,11 +96,20 @@ const TableData = (props: EditProps) => {
       <td>{status}</td>
       <td>
         {/* edit button */}
-        <button onClick={handleShow} data-testid="edit">
+
+        <button
+          onClick={handleShow}
+          data-testid="edit"
+          disabled={status === "Cancelled"}
+        >
           <span className="material-symbols-outlined">edit</span>
         </button>
         {/* cancel button */}
-        <button onClick={onCancel} data-testid="cancel">
+        <button
+          onClick={onCancel}
+          data-testid="cancel"
+          disabled={status === "Cancelled"}
+        >
           <span className="material-symbols-outlined">cancel</span>
         </button>
       </td>
