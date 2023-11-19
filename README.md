@@ -249,6 +249,11 @@ Deploying both frontend and backend together offers several advantages:
 
 **Easy Deployment**: Deploying together simplifies the deployment process, especially in cloud-based environments like CodeSandbox.
 
+### Deployment links
+
+frontend : https://p7j9t9-3000.csb.app/
+backend: https://p7j9t9-8080.csb.app
+
 ### Conclusion
 
 The Patient Tracker App aims to provide an efficient and secure solution for managing doctor-patient appointments. The combination of React, Express.js, and MongoDB ensures a robust and scalable architecture. By deploying on CodeSandbox, the development and testing process becomes more accessible, allowing for quick prototyping and collaboration.

@@ -88,8 +88,6 @@ const TableData = (props: EditProps) => {
     }
   };
 
-  console.log(dateTime);
-
   return (
     // rendering table data
     <tr>
