@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import FormModal from "../formModal/formModal";
 import { UserInformation } from "../../interfaces/interfaces";
 import { returnBearer } from "../../utils/utils";
+import { DateTime } from "luxon";
 
 // Defining the prop types for TableData component
 interface EditProps {
@@ -90,7 +91,7 @@ const TableData = (props: EditProps) => {
     // rendering table data
     <tr>
       <td>{name}</td>
-      <td>{dateTime}</td>
+      <td>{DateTime.fromISO(dateTime).toFormat("ff")}</td>
       <td>{status}</td>
       <td>
         {/* edit button */}
