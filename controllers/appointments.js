@@ -2,9 +2,6 @@
 
 const Appointment = require("../models/appointments");
 
-// initializing appointments variable to store appointments
-const appointments = {};
-
 // Adding an appointment
 async function addAppointment(req, res) {
   try {
@@ -17,7 +14,7 @@ async function addAppointment(req, res) {
     const appointment = new Appointment({
       name,
       username,
-      dateTime,
+      dateTime: new Date(dateTime),
       consultant,
       status: "Active",
     });
@@ -55,7 +52,9 @@ async function fetchAppointments(req, res) {
     const appointments = await Appointment.find().select("-__v").lean();
 
     // Responding with a 200 status and return the appointments
-    res.status(200).json({ appointments });
+    res.status(200).json({
+      appointments,
+    });
   } catch (error) {
     console.log(error);
 
@@ -77,15 +76,16 @@ async function fetchUserAppointments(req, res) {
     // getting appointments using the username and dateTime
     const appointments = await Appointment.find({
       username,
-      // dateTime: { $gte: thirtyDaysAgo }, // Filter appointments within the last 30 days
+      dateTime: { $gte: thirtyDaysAgo }, // Filter appointments within the last 30 days
     })
-
       // ommitting the _v property
       .select("-__v")
       .lean();
 
     // Responding with a 200 status and return the appointments
-    res.status(200).json({ appointments });
+    res.status(200).json({
+      appointments,
+    });
   } catch (error) {
     console.log(error);
 
@@ -106,7 +106,7 @@ async function editAppointment(req, res) {
     // Using findByIdAndUpdate to update the appointment
     const updatedAppointment = await Appointment.findByIdAndUpdate(
       id,
-      { name, consultant, dateTime },
+      { name, consultant, dateTime: new Date(dateTime) },
       { new: true, runValidators: true }
     );
 
